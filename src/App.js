@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate
+} from "react-router-dom";
+import { createBrowserHistory } from 'history';
+import { ThemeProvider } from "styled-components";
 
-function App() {
+import GlobalStyle from "./components/globalStyle";
+import theme from "./components/theme";
+
+import Home from './components/Home';
+import Header from './components/Header';
+import Main from './components/Main';
+import Crew from './pages/Crew';
+
+const App = () => {
+  let history = createBrowserHistory();
+  let location = history.location;
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyle />
+        <Header/>
+        <Main bg={history.location.pathname === '/' ? 'home':location.pathname.replace("/","") }>
+          <Routes>
+            {/* <Route path="/about">
+              <About />
+            </Route>
+            <Route path="/users">
+              <Users />
+            </Route> */}
+            <Route path="/crew" element={<Crew/>}/>
+            <Route path="/home" element={<Home/>}/>
+            <Route path="*" element={<Navigate to="/home"/>}/>
+          </Routes>
+        </Main>
+      </ThemeProvider>
+    </Router>
   );
-}
+};
 
 export default App;
