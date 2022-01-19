@@ -36,6 +36,7 @@ export const TabItem = styled.li`
     letter-spacing:2.36px;
     text-transform:uppercase;
     color:${({theme})=>theme.color.primary};
+    cursor:pointer;
     &:not(:last-child){
         padding-right:2.6rem;
     }
@@ -51,7 +52,7 @@ export const TabItem = styled.li`
 `
 
 export const Title = styled.h2`
-
+    text-transform:uppercase;
 `
 export const Text = styled.p`
     padding-bottom:3.2rem;

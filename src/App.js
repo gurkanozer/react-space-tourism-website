@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useContext} from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import GlobalStyle from "./components/globalStyle";
-import theme from "./components/theme";
+import { GlobalContext } from "./context/globalState";
 import Home from './components/Home';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -16,6 +16,7 @@ import Destination from './pages/Destination';
 import Technology from './pages/Technology';
 
 const App = () => {
+  const { theme } = useContext(GlobalContext);
   const [background, setBackground] = useState(''); 
   const backgroundHandler = (bg) =>{
     setBackground(bg)

@@ -1,4 +1,0 @@
-//CREW
-export const GET_CREW = "GET_CREW";
-export const GET_DESTINATION = "GET_DESTINATION";
-export const GET_TECHNOLOGY = "GET_TECHNOLOGY";

@@ -1,10 +1,10 @@
 import React from 'react'
 import {Container, Title, Number, Image} from './style';
-const Hero = () => {
+const Hero = ({data}) => {
     return (
         <Container>
             <Title><Number>01</Number> Pick your destination</Title>
-            <Image src={`${process.env.PUBLIC_URL}/assets/destination/image-moon.png`}/>
+            <Image src={`${process.env.PUBLIC_URL}${data.images.png}`}/>
         </Container>
     )
 }
