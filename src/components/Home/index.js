@@ -1,7 +1,13 @@
-import React from 'react';
+import React, {useEffect}  from 'react';
 import {Container,Content, SubTitle, Title, Paragraph, Explore} from './style';
+import { createBrowserHistory } from "history";
 
-const Header = () => {
+const Header = ({setBackground}) => {
+    let history = createBrowserHistory();
+    let { pathname } = history.location;
+    useEffect(() => {
+      setBackground(pathname.replace('/',''));
+  }, []);
     return (
         <Container>
             <Content>
