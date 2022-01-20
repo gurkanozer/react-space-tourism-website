@@ -5,20 +5,20 @@ import Title from '../components/crew/Title';
 import Image from '../components/crew/Image';
 import Tabs from '../components/crew/Tabs';
 import { GlobalContext } from '../context/globalState';
+import useLinks from "../hooks/useLinks";
 
 const Crew = ({ setBackground }) => {
   let history = createBrowserHistory();
   let { pathname } = history.location;
   const {crew} = useContext(GlobalContext); 
   const [data,setData] = useState(crew[0]); 
-  const [tabLinks, setTabLinks] = useState([]);
+  const tabLinks = useLinks(crew);
 
   const activeTabHandler = (e) => {
     setData(crew.find(c=> c.name === e));
 }
 
   useEffect(() => {
-    setTabLinks(crew.map(c=>{return c.name}));
     setBackground(pathname.replace('/',''));
 }, []);
   return (

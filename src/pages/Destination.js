@@ -4,20 +4,20 @@ import Container from '../components/destination/Container';
 import Hero from '../components/destination/Hero';
 import Tabs from '../components/destination/Tabs';
 import { GlobalContext } from '../context/globalState';
+import useLinks from '../hooks/useLinks';
 
 const Destination = ({setBackground}) => {
     let history = createBrowserHistory();
     let { pathname } = history.location;
     const {destinations} = useContext(GlobalContext); 
     const [data,setData] = useState(destinations[0]); 
-    const [tabLinks, setTabLinks] = useState([]);
+    const tabLinks = useLinks(destinations);
 
     const activeTabHandler = (e) => {
         setData(destinations.find(d=> d.name === e));
     }
 
     useEffect(() => {
-        setTabLinks( destinations.map(d=>{return d.name}))
         setBackground(pathname.replace('/',''));
   }, []);
     

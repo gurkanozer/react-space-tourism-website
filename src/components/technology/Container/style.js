@@ -5,16 +5,18 @@ export const Section = styled.section`
     height:100%;
     min-height:100vh;
     max-width:111rem;
-    margin:0 auto;
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:flex-start;
-    padding:0 2.4rem;
+    padding-top:8.8rem;
+    @media (min-width:768px){
+        padding-top:13.6rem;
+    }
     @media (min-width:1024px){
         display:grid;
-        grid-template-columns:1fr 1fr;
-        align-items:flex-start;
-        padding-top:21.2rem;
+        grid-template-areas:"title title title" "dots content image" ;
+        grid-template-rows:3.4rem 1fr;
+        margin:0 auto;
     }
 `

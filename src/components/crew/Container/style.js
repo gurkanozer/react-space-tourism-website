@@ -8,6 +8,7 @@ export const Section = styled.section`
     max-width:111rem;
     display:flex;
     flex-direction:column;
+    padding:0 2.4rem;
     padding-top:8.8rem;
     @media (min-width:768px){
         padding-top:13.8rem;
