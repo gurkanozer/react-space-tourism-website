@@ -14,7 +14,6 @@ export const Container = styled.div`
         margin-top:0;
         align-items:flex-start;
     }
-
 `
 
 export const Title = styled.h5`

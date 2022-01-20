@@ -1,8 +1,16 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-    width:100%;
     margin-top:2.6rem;
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    @media (min-width:1024px){
+        justify-content:right;
+    }
+    `
+export const Inner = styled.div`
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -15,7 +23,7 @@ export const Container = styled.div`
         margin-top:6.4rem;
         align-items:flex-start;
     }
-    `
+`
 
 export const TabList = styled.ul`
     display:flex;
@@ -53,6 +61,9 @@ export const TabItem = styled.li`
 
 export const Title = styled.h2`
     text-transform:uppercase;
+    @media (min-width:1024px){
+        margin-bottom:1.4rem;
+    }
 `
 export const Text = styled.p`
     padding-bottom:3.2rem;
@@ -67,6 +78,8 @@ export const Text = styled.p`
     @media (min-width:1024px){
         max-width:44.5rem;
         text-align:left;
+        padding-bottom:5.4rem;
+        margin-bottom:2.8rem;
     }
 `
 export const Stats = styled.div`
@@ -82,6 +95,8 @@ export const Stats = styled.div`
         justify-content:space-evenly;
     }
     @media (min-width:1024px){
+        padding-left:0;
+        max-width:44.5rem;
         justify-content:left;
     }
 `
@@ -93,7 +108,9 @@ export const StatsSub = styled.div`
     margin-bottom:3.2rem;
     text-transform:uppercase;
     @media (min-width:1024px){
-        margin-right:7.9rem;
+        &:not(:last-child){
+            margin-right:7.9rem;
+        }
     }
 `
 export const StatsText = styled.span`

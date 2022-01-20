@@ -12,7 +12,7 @@ const Destination = ({setBackground}) => {
     const [data,setData] = useState(destinations[0]); 
     const [tabLinks, setTabLinks] = useState([]);
 
-    const activeTabhandler = (e) => {
+    const activeTabHandler = (e) => {
         setData(destinations.find(d=> d.name === e));
     }
 
@@ -24,7 +24,7 @@ const Destination = ({setBackground}) => {
   return (
         <Container>
             <Hero data={data}/>
-            <Tabs data={data} tabLinks={tabLinks} activeTabHandler={activeTabhandler}/>
+            <Tabs data={data} tabLinks={tabLinks} activeTabHandler={activeTabHandler}/>
         </Container>
     )
 }

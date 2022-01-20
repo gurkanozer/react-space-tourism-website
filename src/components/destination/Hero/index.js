@@ -4,7 +4,7 @@ const Hero = ({data}) => {
     return (
         <Container>
             <Title><Number>01</Number> Pick your destination</Title>
-            <Image src={`${process.env.PUBLIC_URL}${data.images.png}`}/>
+            <Image src={`${process.env.PUBLIC_URL}${data.images.png}`} alt={data.name}/>
         </Container>
     )
 }

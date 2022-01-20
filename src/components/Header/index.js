@@ -7,7 +7,7 @@ const Header = () => {
         <Container>
             <Inner>
                 <Brand to="/">
-                    <BrandLogo src={`${process.env.PUBLIC_URL}/assets/shared/logo.svg`} alt=""/>
+                    <BrandLogo src={`${process.env.PUBLIC_URL}/assets/shared/logo.svg`} aria-label="Space Tourism" alt=""/>
                 </Brand>
                 <Navbar status={navbarStatus} setStatus={setNavbarStatus}/>
                 <ToggleBtn onClick={()=>{setNavbarStatus(true)}}>
