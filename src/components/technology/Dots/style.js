@@ -28,8 +28,13 @@ export const DotLink = styled.li`
     justify-content:center;
     font-size:1.6rem;
     font-weight:600;
+    transition:background .6s ease-in-out;
+    cursor:pointer;
     &:not(:last-child){
         margin-right:1.6rem;
+    }
+    &:hover{
+        background:rgba(255,255,255,0.02);
     }
     &.active{
         background:${({theme})=>theme.color.secondary};

@@ -18,5 +18,7 @@ export const Section = styled.section`
         grid-template-areas:"title title title" "dots content image" ;
         grid-template-rows:3.4rem 1fr;
         margin:0 auto;
+        min-height:90rem;
+        height:100vh;
     }
 `

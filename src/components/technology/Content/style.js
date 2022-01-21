@@ -9,6 +9,7 @@ export const ContentContainer = styled.div`
         max-width:47rem;
         padding:0;
         text-align:left;
+        z-index:10;
     }
 `
 export const SubTitle = styled.p`

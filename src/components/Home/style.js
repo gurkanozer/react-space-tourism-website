@@ -59,6 +59,10 @@ export const Explore = styled.button`
     font-weight:400;
     color:${({theme})=>theme.color.tertiary};
     letter-spacing:1.25px;
+    &:hover{
+        animation:animateShadow .5s;
+        animation-fill-mode: forwards;
+    }
     @media (min-width:768px){
         margin-top:15.6rem;
         width:24.2rem;

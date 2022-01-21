@@ -9,6 +9,7 @@ export const Container = styled.div`
         position:absolute;
         top:27.2rem;
         right:0;
+        z-index:0;
     }
 `
 export const Img = styled.img`

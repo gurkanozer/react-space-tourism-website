@@ -56,6 +56,24 @@ export const TabItem = styled.li`
     @media (min-width:768px){
         font-size:1.6rem;
         letter-spacing:2.7px;
+        ${TabText}{
+        position:relative;
+        &::after{
+            position:absolute;
+            content:'';
+            width:0;
+            height:0.3rem;
+            background:${({theme})=>theme.color.primary};
+            bottom:-0.3rem;
+            left:50%;
+            transform: translateX(-50%);
+            transition:width .2s ease;
+        }
+        &:hover{
+           &:after{
+               width:100%;
+           }
+        }
     }
 `
 

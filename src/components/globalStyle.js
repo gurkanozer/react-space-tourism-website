@@ -98,6 +98,22 @@ h5{
         line-height:3.2rem;
     }
 }
+
+@keyframes animateShadow{
+    0% {
+        box-shadow: 0 0 0 0 rgba(11, 13, 23, 46%); 
+    }
+    25%{
+        transform:scale(1.05);
+    }
+    50%{
+        box-shadow: 0 0 0 4rem rgba(11, 13, 23, 46%); 
+        transform: scale(1);
+    }
+    100%{
+        box-shadow: 0 0 0 3rem rgba(11, 13, 23, 46%); 
+    }
+}
 `;
 
 export default GlobalStyle;
