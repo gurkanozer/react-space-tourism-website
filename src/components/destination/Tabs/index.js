@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React from 'react';
 import {Container,Inner, TabList, TabItem, TabText, Title, Text, Stats, StatsSub, StatsText, StatsNumber} from './style';
 
 const Tabs = ({data, tabLinks, activeTabHandler}) => {

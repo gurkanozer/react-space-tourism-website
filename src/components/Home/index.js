@@ -7,7 +7,7 @@ const Header = ({setBackground}) => {
     let { pathname } = history.location;
     useEffect(() => {
       setBackground(pathname.replace('/',''));
-  }, []);
+  }, [pathname, setBackground]);
     return (
         <Container>
             <Content>

@@ -20,7 +20,7 @@ const Technology = ({setBackground}) => {
     }
     useEffect(() => {
         setBackground(pathname.replace('/',''));
-  }, []);
+  }, [pathname,setBackground]);
     return (
         <Container>
             <Title/>

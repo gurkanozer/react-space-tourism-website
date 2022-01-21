@@ -9,7 +9,7 @@ const useLinks = (data) => {
         return d.name;
       })
     );
-  }, []);
+  }, [data]);
   return links;
 };
 export default useLinks;

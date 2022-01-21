@@ -1,5 +1,5 @@
 import React from 'react';
-import {Container,Title, Number, Img} from './style';
+import {Container,Img} from './style';
 const Image = ({data}) => {
   return (
       <Container>
