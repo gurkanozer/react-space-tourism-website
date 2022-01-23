@@ -50,6 +50,9 @@ export const List = styled.ul`
         margin:0;
         padding:0 3.2rem;
     }
+    @media (min-width:1024px){
+        padding-right:5.6rem;
+     }
 `
 
 export const Link = styled(NavLink)`
@@ -72,7 +75,18 @@ export const Link = styled(NavLink)`
         border-bottom: 0.3rem solid transparent;
         &.active{
             border-right:none;
-            border-bottom:0.3rem solid ${({theme})=>theme.color.primary};
+            &::after{
+                position:absolute;
+                content:'';
+                width:calc(100% - 6.4rem);
+
+                height:0.3rem;
+                background:${({theme})=>theme.color.primary};
+                bottom:-0.3rem;
+                left:50%;
+                transform: translateX(-50%);
+                transition:width .2s ease;
+            }
         }
         position:relative;
         &::after{
@@ -88,12 +102,12 @@ export const Link = styled(NavLink)`
         }
         &:hover{
            &:after{
-               width:100%;
+               width:calc(100% - 6.4rem);
            }
         }
     }
     @media (min-width:1024px){
-        padding:0 2.4rem;
+        padding:0 3.2rem;
     }
     `
 
