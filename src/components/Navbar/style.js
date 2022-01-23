@@ -23,18 +23,12 @@ export const Container = styled.div`
     @media (min-width:1024px){
         position:relative;
         background:none;
-        &::after{
-            content:"";
-            position:absolute;
-            width:100vw;
-            height:9.6rem;
-            top:0;
-            left:-12.3rem;
-            background: linear-gradient(to left, rgba(11,13,23,1), rgba(255, 255, 255,10%));
-            -webkit-backdrop-filter: blur(1.5rem);
-            backdrop-filter: blur(1.5rem);
-            z-index:0;
-        }
+        background: linear-gradient(to left, rgba(11,13,23,1), rgba(255, 255, 255,10%));
+        -webkit-backdrop-filter: blur(1.5rem);
+        backdrop-filter: blur(1.5rem);
+        width:100%;
+        max-width:83rem;
+        margin-left:9.3rem;
     }
 `
 
@@ -73,13 +67,14 @@ export const Link = styled(NavLink)`
         line-height:9.3rem;
         padding:0 1.6rem;
         border-bottom: 0.3rem solid transparent;
+        position:relative;
+        
         &.active{
             border-right:none;
-            &::after{
+            &::before{
                 position:absolute;
                 content:'';
-                width:calc(100% - 6.4rem);
-
+                width:calc(100% - 3.2rem);
                 height:0.3rem;
                 background:${({theme})=>theme.color.primary};
                 bottom:-0.3rem;
@@ -88,7 +83,11 @@ export const Link = styled(NavLink)`
                 transition:width .2s ease;
             }
         }
-        position:relative;
+        &:hover{
+           &:after{
+               width:calc(100% - 3.2rem);
+           }
+        }
         &::after{
             position:absolute;
             content:'';
@@ -100,14 +99,20 @@ export const Link = styled(NavLink)`
             transform: translateX(-50%);
             transition:width .2s ease;
         }
-        &:hover{
-           &:after{
-               width:calc(100% - 6.4rem);
-           }
-        }
     }
     @media (min-width:1024px){
+        width:auto;
         padding:0 3.2rem;
+        &:hover{
+            &::after{
+                width:calc(100% - 6.4rem);
+            }
+         }
+         &.active{
+             &::before{
+                width:calc(100% - 6.4rem);
+             }
+         }
     }
     `
 

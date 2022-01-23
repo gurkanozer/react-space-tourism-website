@@ -18,7 +18,6 @@ export const Container = styled.header`
 `
 export const Inner = styled.div`
     width:100%;
-    max-width:126.8rem;
     margin:0 auto;
     padding:2.4rem;
     display:flex;
@@ -30,8 +29,8 @@ export const Inner = styled.div`
         height:9.6rem;
     }
     @media (min-width:1024px){
-        padding-left:0;
-        justify-content:space-between;
+        padding:0;
+        position:relative;
     }
 `
 
@@ -65,10 +64,14 @@ export const MenuIcon = styled.img`
 
 export const Line = styled.div`
     width:100%;
+    max-width:calc(100% - 83rem);
     height:0.1rem;
     background:${({theme})=>theme.color.primary};
-    margin-right:9.3rem;
     display:none;
+    position:absolute;
+    top:4.8rem;
+    left:4.8rem;
+    z-index:10;
     @media (min-width:1024px){
         display:block;
     }
