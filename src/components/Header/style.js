@@ -7,6 +7,8 @@ export const Container = styled.header`
     top:0;
     left:0;
     overflow:hidden;
+    display:flex;
+    align-items:center;
     @media (min-width:768px){
         position:absolute;
     }
@@ -21,17 +23,25 @@ export const Inner = styled.div`
     padding:2.4rem;
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:right;
+
     @media (min-width:768px){
         padding:0 3.9rem;
         height:9.6rem;
     }
-    //1268 max width...
+    @media (min-width:1024px){
+        padding-left:0;
+        justify-content:space-between;
+    }
 `
 
 export const Brand = styled(Link)`
     background:none;
     text-decoration:none;
+    margin-left:2.4rem;
+    @media (min-width:768px){
+        margin-left:5.5rem;
+    }
 
 `
 export const BrandLogo = styled.img`
@@ -51,4 +61,14 @@ export const ToggleBtn = styled.button`
 export const MenuIcon = styled.img`
     width:24;
     height21:
+`
+
+export const Line = styled.div`
+    width:100%;
+    height:0.1rem;
+    background:${({theme})=>theme.color.primary};
+    display:none;
+    @media (min-width:1024px){
+        display:block;
+    }
 `

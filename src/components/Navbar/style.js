@@ -23,7 +23,7 @@ export const Container = styled.div`
     @media (min-width:1024px){
         position:relative;
         background:none;
-        &::before{
+        &::after{
             content:"";
             position:absolute;
             width:100vw;
