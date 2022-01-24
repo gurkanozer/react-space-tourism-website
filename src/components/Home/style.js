@@ -6,6 +6,7 @@ export const Container = styled.section`
     min-height:100vh;
     max-width:111rem;
     margin:0 auto;
+    padding:0 2.4rem;
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -37,6 +38,7 @@ export const SubTitle = styled.h5`
     font-family:${({theme})=>theme.font.tertiary};
     @media (min-width:1024px){
         letter-spacing:4.72px;
+        margin-bottom:2.4rem;
     }
     `
 export const Title = styled.h1`
@@ -44,6 +46,9 @@ export const Title = styled.h1`
     text-transform:uppercase;
     @media (min-width:768px){
         padding:2.4rem 0;
+    }
+    @media (min-width:1024px){
+        margin-bottom:2.4rem;
     }
 `
 export const Paragraph = styled.p`
@@ -55,13 +60,13 @@ export const Explore = styled.button`
     height:15rem;
     background:${({theme})=>theme.color.secondary};
     border-radius:50%;
+    font-family:${({theme})=>theme.font.primary};
     font-size:2rem;
     font-weight:400;
     color:${({theme})=>theme.color.tertiary};
     letter-spacing:1.25px;
     &:hover{
-        animation:animateShadow .5s;
-        animation-fill-mode: forwards;
+        animation:animateShadow .5s forwards;
     }
     @media (min-width:768px){
         margin-top:15.6rem;

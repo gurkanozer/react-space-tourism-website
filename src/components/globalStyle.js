@@ -105,15 +105,18 @@ h5{
     }
     25%{
         transform:scale(1.05);
+        -webkit-transform: scale(1.05);
     }
     50%{
         box-shadow: 0 0 0 4rem rgba(11, 13, 23, 46%); 
         transform: scale(1);
+        -webkit-transform: scale(1);
     }
     100%{
         box-shadow: 0 0 0 3rem rgba(11, 13, 23, 46%); 
     }
 }
+
 `;
 
 export default GlobalStyle;

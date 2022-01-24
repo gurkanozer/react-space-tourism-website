@@ -64,13 +64,13 @@ export const MenuIcon = styled.img`
 
 export const Line = styled.div`
     width:100%;
-    max-width:calc(100% - 83rem);
+    max-width:calc(100% - 86.4rem);
     height:0.1rem;
-    background:${({theme})=>theme.color.primary};
+    background:${({theme})=>theme.color.secondary};
     display:none;
     position:absolute;
     top:4.8rem;
-    left:4.8rem;
+    left:6.4rem;
     z-index:10;
     @media (min-width:1024px){
         display:block;

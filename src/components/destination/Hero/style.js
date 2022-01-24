@@ -41,7 +41,6 @@ export const Number = styled.span`
 export const Image = styled.img`
     width:17rem;
     height:17rem;
-    
     @media (min-width:768px){
         width:30rem;
         height:30rem;
@@ -50,4 +49,5 @@ export const Image = styled.img`
         width:44.5rem;
         height:44.5rem;
     }
+
 `

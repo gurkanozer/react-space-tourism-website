@@ -23,7 +23,7 @@ export const Container = styled.div`
     @media (min-width:1024px){
         position:relative;
         background:none;
-        background: linear-gradient(to left, rgba(11,13,23,1), rgba(255, 255, 255,10%));
+        background: linear-gradient(to right, rgba(11,13,23,1), rgba(255, 255, 255,10%));
         -webkit-backdrop-filter: blur(1.5rem);
         backdrop-filter: blur(1.5rem);
         width:100%;
@@ -52,6 +52,7 @@ export const List = styled.ul`
 export const Link = styled(NavLink)`
     width:100%;
     font-size:1.6rem;
+    letter-spacing:0.27rem;
     text-transform:uppercase;
     color:${({theme})=>theme.color.primary};
     font-family:${({theme})=>theme.font.tertiary};
@@ -102,7 +103,7 @@ export const Link = styled(NavLink)`
     }
     @media (min-width:1024px){
         width:auto;
-        padding:0 3.2rem;
+        padding:0 2.4rem;
         &:hover{
             &::after{
                 width:calc(100% - 6.4rem);
